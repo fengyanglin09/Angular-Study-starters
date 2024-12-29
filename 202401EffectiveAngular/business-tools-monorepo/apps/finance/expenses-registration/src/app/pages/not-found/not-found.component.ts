@@ -2,10 +2,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-expenses-approval-page',
+  selector: 'app-not-found',
   imports: [CommonModule],
-  templateUrl: './expenses-approval-page.component.html',
-  styleUrl: './expenses-approval-page.component.scss',
+  templateUrl: './not-found.component.html',
+  styleUrl: './not-found.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class ExpensesApprovalPageComponent {}
+export class NotFoundComponent {}

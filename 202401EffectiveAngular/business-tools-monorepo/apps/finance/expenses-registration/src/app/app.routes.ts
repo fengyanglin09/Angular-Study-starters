@@ -1,8 +1,7 @@
 import {ResolveFn, Route, RouterStateSnapshot, TitleStrategy} from '@angular/router';
-import {ExpensesOverviewPageComponent} from "./pages/expenses-overview-page/expenses-overview-page.component";
-import {ExpensesApprovalPageComponent} from "./pages/expenses-approval-page/expenses-approval-page.component";
 import {Injectable} from "@angular/core";
 import {Title} from "@angular/platform-browser";
+import {NotFoundComponent} from "./pages/not-found/not-found.component";
 
 
 @Injectable()
@@ -23,6 +22,12 @@ export const titleResolver: ResolveFn<string> = (route, state) =>
   route.routeConfig?.path?.replace('-', ' ') ?? '';
 
 export const appRoutes: Route[] = [
-  { path: 'expenses-overview', component: ExpensesOverviewPageComponent, title: titleResolver },
-  { path: 'expenses-approval', component: ExpensesApprovalPageComponent, title: titleResolver },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/expenses-overview'
+  },
+  { path: 'expenses-overview', loadComponent: () => import('./pages/expenses-overview-page/expenses-overview-page.component'), title: titleResolver },
+  { path: 'expenses-approval', loadComponent: () => import('./pages/expenses-approval-page/expenses-approval-page.component'), title: titleResolver },
+  { path: '**', component: NotFoundComponent }, //this is the fallback page
 ];
