@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="NxAngularConfigService" workspaceLocation="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/nx.json">
+    <projects>
+      <project name="common-components" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/ui/common-components/project.json" />
+      <project name="expenses-registration" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/finance/expenses-registration/project.json" />
+      <project name="expenses-registration-e2e" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/finance/expenses-registration-e2e/project.json" />
+      <project name="social-media-dashboard" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/marketing/social-media-dashboard/project.json" />
+      <project name="social-media-dashboard-e2e" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/marketing/social-media-dashboard-e2e/project.json" />
+      <project name="workspace-generators-plugin" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/workspace-generators-plugin/project.json" />
+    </projects>
+  </component>
+</project>
