@@ -1,0 +1,15 @@
+<span [@selectedState]="animationState"
+      (@selectedState.start)="onAnimationEvent($event)"
+      (@selectedState.done)="onAnimationEvent($event)"
+      (click)="onSelectionChanged()"
+>{{labelText}}</span>
+
+<br>
+<br>
+
+<span>{{this.animationMsg}}</span>
+
+
+
+<!--In the example below, all animations inside div with @.disabled are disabled if the isDisabled property is true.-->
+<div [@.disabled]="true"> ……… </div>

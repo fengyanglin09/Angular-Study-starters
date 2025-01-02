@@ -1,1 +1,20 @@
 <p btLibsUiHighlight >expenses-approval-page works!</p>
+
+
+<span> directive is applied to this span automatically </span>
+<div></div>
+<span noHighlight> directive is not applied to this span automatically </span>
+
+<div *btLibsUiIfFalse="false">shown when false</div>
+
+
+<span>number increased by 1: {{timer | async}}</span>
+<br>
+<span>number multiplied by 2: {{timer | async | multiply}}</span>
+<br>
+<span>number multiplied by 5: {{timer | async | multiply: 5}}</span>
+<br>
+<span>number multiplied by 5 then added by 2: {{timer | async | multiply: 5 : 10}}</span>
+<br>
+<br>
+<bt-libs-ui-selectable-label></bt-libs-ui-selectable-label>

@@ -1,7 +1,21 @@
 import {Directive, ElementRef, HostBinding, HostListener, inject, Input, OnInit} from '@angular/core';
 
+/**
+ *
+ * You can also make selectors that apply directives to HTML elements with a specific ID, data attribute, or CSS class applied to the HTML element. Here is an example for all three of these options:
+ *
+ *
+ * selector: '#someId, .someCssClass, [data-highlight="true"]'
+ *
+ * */
+
+/**
+ * @note1 - all span elements will have the highlight directive applied unless you add noHighlight to a span element
+ * @note2 - you can add the btLibsUiHighlight directive to all elements but the label element. When you try to add the directive to a label element, the compiler will throw up an error
+ *
+ * */
 @Directive({
-  selector: '[btLibsUiHighlight]',
+  selector: 'span:not([noHighlight]), [btLibsUiHighlight]:not(label)',
 })
 export class HighlightDirective implements OnInit{
 
