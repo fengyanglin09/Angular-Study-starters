@@ -21,3 +21,13 @@ form.ng-touched {
 
 
 
+
+//ng-valid: This is applied when the form control or group is valid based on the validation rules. It’s applied to the form when all groups and controls are valid.
+//ng-invalid: This is applied when the form control doesn’t pass all validation rules. It’s applied to the form when one or more controls are invalid.
+//ng-pending: This is applied when an asynchronous validation is being validated.
+//ng-pristine: This is applied to a form control that has not been interacted with. It’s applied to the form when there has been no interaction with any of the form controls.
+//ng-dirty: This is applied to a form control that has been interacted with. It’s applied to the form when there has been interaction with at least one form control.
+//ng-untouched: This is applied to a form control that the user has not focused on or interacted with. It’s applied to the form when no field has been focused or interacted with.
+//ng-touched: This is applied to a form control that the user has focused on or interacted with. It’s applied to the form when at least one field has been focused or interacted with.
+//ng-submitted: This is applied to the form element when the form has been submitted.
+

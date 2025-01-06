@@ -9,6 +9,7 @@
       <project name="expenses-registration" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/finance/expenses-registration/project.json" />
       <project name="expenses-registration-e2e" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/finance/expenses-registration-e2e/project.json" />
       <project name="expenses-registration-forms" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/finance/ui/expenses-registration-forms/project.json" />
+      <project name="form-validators" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/util/form-validators/project.json" />
       <project name="social-media-dashboard" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/marketing/social-media-dashboard/project.json" />
       <project name="social-media-dashboard-e2e" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/marketing/social-media-dashboard-e2e/project.json" />
       <project name="workspace-generators-plugin" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/workspace-generators-plugin/project.json" />

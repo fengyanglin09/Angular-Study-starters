@@ -7,12 +7,14 @@
     <label for="description">Description:</label>
     <input
       required
+      [btLibsUtilMaxWordCount]="5"
       [ngModelOptions]="{updateOn: 'change', standalone: false}"
       [(ngModel)]="expenseToAdd.description"
       #description="ngModel"
       type="text" id="description" name="description"
     >
-    <span *ngIf="description.hasError('required')">This field is required</span>
+    <span *ngIf="description.hasError('required') ">This field is required</span>
+    <span *ngIf="description.hasError('btLibsUtilMaxWordCount')">can not be more than 5 words</span>
   </div>
 
   <fieldset ngModelGroup="amount" >
@@ -36,7 +38,7 @@
     <input [(ngModel)]="expenseToAdd.date" type="text" id="date" name="date">
   </div>
 
-  <button type="submit">Submit</button>
+  <button [disabled]="addExpenseForm.invalid" type="submit">Submit</button>
 </form>
 
 {{expenseToAdd | json}}
