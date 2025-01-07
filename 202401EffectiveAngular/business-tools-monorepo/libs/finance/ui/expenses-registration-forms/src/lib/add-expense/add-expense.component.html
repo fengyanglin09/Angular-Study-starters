@@ -31,6 +31,31 @@
 
   </fieldset>
 
+  <fieldset
+    btLibsUtilCrossFieldsCheck
+    ngModelGroup="password"
+    #password="ngModelGroup"
+  >
+
+    <div class="form-field">
+      <label for="firstPassword">Password:</label>
+      <input required
+             #firstPassword="ngModel"
+             [style]="password.invalid || firstPassword.invalid ? 'border-left: 5px solid #a94442' : 'border-left: 5px solid #42A948'"
+        [(ngModel)]="expenseToAdd.password.password"
+        type="text" id="firstPassword" name="firstPassword">
+    </div>
+
+    <div class="form-field">
+      <label for="confirmedPassword">Confirmed Password:</label>
+      <input required
+             #confirmedPassword="ngModel"
+             [style]="password.invalid || confirmedPassword.invalid ? 'border-left: 5px solid #a94442' : 'border-left: 5px solid #42A948'"
+        [(ngModel)]="expenseToAdd.password.confirmPassword" type="text" id="confirmedPassword" name="confirmedPassword">
+    </div>
+
+  </fieldset>
+
 
 
   <div class="form-field">

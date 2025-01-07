@@ -3,6 +3,10 @@ export interface AddExpense {
   amountExclVat: number | null;
   vatPercentage: number | null;
   date: Date | null;
+  password: {
+    password: string | null;
+    confirmPassword: string | null;
+  };
 }
 
 export interface AddExpenseReactive {
@@ -11,6 +15,7 @@ export interface AddExpenseReactive {
     amountExclVat?: number | null;
     vatPercentage?: number | null;
   };
+
   date?: string[];
   tags?: string[];
 }

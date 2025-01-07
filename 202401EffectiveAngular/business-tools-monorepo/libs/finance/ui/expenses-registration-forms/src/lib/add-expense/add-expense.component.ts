@@ -2,11 +2,11 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewChi
 import {CommonModule} from '@angular/common';
 import {FormsModule, NgForm, ReactiveFormsModule} from "@angular/forms";
 import {AddExpense} from "./add-expense.interface";
-import {MaxWordCountDirective} from "@bt-libs/shared/util/form-validators";
+import {CrossFieldsCheckDirective, MaxWordCountDirective} from "@bt-libs/shared/util/form-validators";
 
 @Component({
   selector: 'bt-libs-ui-add-expense',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, MaxWordCountDirective],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, MaxWordCountDirective, CrossFieldsCheckDirective],
   templateUrl: './add-expense.component.html',
   styleUrl: './add-expense.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -21,7 +21,11 @@ export class AddExpenseComponent {
     description: '',
     amountExclVat: null,
     vatPercentage: null,
-    date: null
+    date: null,
+    password: {
+      password: null,
+      confirmPassword: null,
+    }
   }
 
   @Output() addExpense = new EventEmitter<AddExpense>();

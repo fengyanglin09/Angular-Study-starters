@@ -21,6 +21,31 @@ form.ng-touched {
 
 
 
+//form.ng-pristine {
+//  .ng-valid:not(fieldset)  {
+//    border-left: 5px solid #42A948; /* green */
+//  }
+//
+//  .ng-invalid:not(form, fieldset) {
+//    border-left: 5px solid #a94442; /* red */
+//  }
+//}
+//
+//
+//form.ng-touched {
+//  .ng-valid:not(fieldset)  {
+//    border-left: 5px solid #42A948; /* green */
+//  }
+//
+//  .ng-invalid:not(form, fieldset) {
+//    border-left: 5px solid #a94442; /* red */
+//  }
+//}
+
+
+
+
+
 
 //ng-valid: This is applied when the form control or group is valid based on the validation rules. It’s applied to the form when all groups and controls are valid.
 //ng-invalid: This is applied when the form control doesn’t pass all validation rules. It’s applied to the form when one or more controls are invalid.
