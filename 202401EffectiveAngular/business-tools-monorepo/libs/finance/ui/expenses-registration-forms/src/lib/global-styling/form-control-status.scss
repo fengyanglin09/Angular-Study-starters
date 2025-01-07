@@ -1,24 +1,61 @@
+.form-valid {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.form-invalid {
+  border-left: 5px solid #a94442; /* red */
+}
+
 form.ng-pristine {
   .ng-valid:not(fieldset)  {
-    border-left: 5px solid #42A948; /* green */
+    @extend .form-valid
   }
 
   .ng-invalid:not(form, fieldset) {
-    border-left: 5px solid #a94442; /* red */
+    @extend .form-invalid
   }
 }
 
 
 form.ng-touched {
   .ng-valid:not(fieldset)  {
-    border-left: 5px solid #42A948; /* green */
+    @extend .form-valid
   }
 
   .ng-invalid:not(form, fieldset) {
-    border-left: 5px solid #a94442; /* red */
+    @extend .form-invalid
   }
 }
 
+
+form.ng-pristine {
+  fieldset.ng-valid {
+    input.ng-valid {
+      @extend .form-valid
+    }
+  }
+
+  fieldset.ng-invalid {
+    input.ng-valid {
+      @extend .form-invalid
+    }
+  }
+}
+
+
+form.ng-touched {
+  fieldset.ng-valid {
+    input.ng-valid {
+      @extend .form-valid
+    }
+}
+
+  fieldset.ng-invalid {
+    input.ng-valid {
+      @extend .form-invalid
+    }
+}
+}
 
 
 //form.ng-pristine {
