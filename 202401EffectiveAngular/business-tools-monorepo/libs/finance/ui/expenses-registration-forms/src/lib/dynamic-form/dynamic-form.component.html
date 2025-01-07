@@ -1,0 +1,22 @@
+<div class="form-container">
+  <form [formGroup]="formModel" (ngSubmit)="onSubmit()">
+
+    <div class="form-field" *ngFor="let control of formModelConfig">
+      <label [for]= control.label >{{control.label}}</label>
+      <ng-container [ngSwitch]="control.formFieldType">
+        <input [id]="control.label" *ngSwitchCase="'input'"
+               formControlName="{{control.controlKey}}"
+               type="{{control.inputType}}">
+        <select [id]="control.label" *ngSwitchCase="'select'"
+                formControlName="{{control.controlKey}}">
+          <option
+            *ngFor="let option of control.selectOptions"
+            value="{{option}}">
+          </option>
+        </select>
+      </ng-container>
+      <span *ngIf="formModel.touched && formModel.get(control.controlKey)?.hasError('required')"> This field is required</span>
+    </div>
+
+  </form>
+</div>
