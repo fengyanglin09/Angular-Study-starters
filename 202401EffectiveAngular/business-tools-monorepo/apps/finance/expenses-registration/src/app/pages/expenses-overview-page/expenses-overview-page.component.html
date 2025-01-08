@@ -10,4 +10,13 @@
 
 <!--this is for a dynamic form-->
 
-<bt-libs-ui-dynamic-form [formModelConfig]="formModelConfig" ></bt-libs-ui-dynamic-form>
+<!--<bt-libs-ui-dynamic-form [formModelConfig]="formModelConfig" ></bt-libs-ui-dynamic-form>-->
+
+
+<!--this is for modal-->
+
+<bt-libs-ui-modal [(shown)]="addExpenseShown" [title]="'Add expense'">
+
+  <bt-libs-ui-add-expense></bt-libs-ui-add-expense>
+
+</bt-libs-ui-modal>
