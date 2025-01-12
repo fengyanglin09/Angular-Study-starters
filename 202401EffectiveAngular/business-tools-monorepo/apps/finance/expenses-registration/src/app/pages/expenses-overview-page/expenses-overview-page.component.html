@@ -15,8 +15,44 @@
 
 <!--this is for modal-->
 
-<bt-libs-ui-modal [(shown)]="addExpenseShown" [title]="'Add expense'">
+<!--<bt-libs-ui-modal [(shown)]="addExpenseShown" [title]="'Add expense'">-->
 
-  <bt-libs-ui-add-expense></bt-libs-ui-add-expense>
+<!--  <div header-content>special header content</div>-->
 
-</bt-libs-ui-modal>
+<!--  <bt-libs-ui-add-expense></bt-libs-ui-add-expense>-->
+
+<!--</bt-libs-ui-modal>-->
+
+
+<!--this is for display scales-->
+
+<!--<bt-libs-ui-display-scales [scaleSizes]="[0.9, 0.8, 0.7, 0.6]">-->
+
+<!--  <ng-template btLibsUiScalesProjection>I scale!!</ng-template>-->
+
+<!--  <ng-template btLibsUiScalesHeaderProjection>I scale??</ng-template>-->
+
+<!--</bt-libs-ui-display-scales>-->
+
+
+<!--<bt-libs-ui-different-ng-template></bt-libs-ui-different-ng-template>-->
+
+
+<!--<bt-libs-ui-multi-open-model></bt-libs-ui-multi-open-model>-->
+
+
+<!--<bt-libs-ui-select (selectedChange)="onOptionChange($event)" [options]="['Test', 'Test 2']"></bt-libs-ui-select>-->
+
+
+<!--<ng-template #expenseSelect let-expense>-->
+<!--  <span>Product: {{ expense.expense }}, Amount: {{ expense.amount }}</span>-->
+<!--</ng-template>-->
+
+
+<!--<bt-libs-ui-select (selectedChange)="onOptionChange($event)" [optionTemplate]="expenseSelect" [options]="[{expense: 'Food',amount: 10},{expense: 'Gas',amount: 20}]"></bt-libs-ui-select>-->
+
+
+<!--<bt-libs-ui-select (selectedChange)="onOptionChange($event)" [labelKey]="'expense'" [options]="[{expense: 'Food',amount: 10},{expense: 'Gas',amount: 20}]"></bt-libs-ui-select>-->
+
+
+<bt-libs-ui-widget-container *ngIf="activeWidget" [widget]="activeWidget"></bt-libs-ui-widget-container>

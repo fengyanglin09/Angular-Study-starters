@@ -1,0 +1,11 @@
+<button (click)="openModal('Title A', modalA)">Open modal A</button>
+<button (click)="openModal('Title B', modalB)">Open modal B</button>
+<bt-libs-ui-modal [(shown)]="showModal" [title]="modalTitle">
+  <ng-container [ngTemplateOutlet]="modalContent"></ng-container>
+</bt-libs-ui-modal>
+<ng-template #modalA>
+  <div>A...</div>
+</ng-template>
+<ng-template #modalB>
+  <div>B...</div>
+</ng-template>
