@@ -1,6 +1,6 @@
 import {Component, inject, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {WEATHERWIDGET} from "../widget-container/widget-tokens";
+import {WEATHERWIDGET, WeatherWidgetData} from "../widget-container/widget-tokens";
 
 @Component({
   selector: 'bt-libs-ui-weather-widget',
@@ -10,9 +10,11 @@ import {WEATHERWIDGET} from "../widget-container/widget-tokens";
 })
 export class WeatherWidgetComponent {
 
-  widgetData = inject(WEATHERWIDGET);
+  // widgetData = inject(WEATHERWIDGET);
+  //
+  // @Input() city2?: string;
+  // @Input() message2?: string;
 
-  @Input() city2?: string;
-  @Input() message2?: string;
+  @Input() widgetDataDefer!: WeatherWidgetData | null;
 
 }

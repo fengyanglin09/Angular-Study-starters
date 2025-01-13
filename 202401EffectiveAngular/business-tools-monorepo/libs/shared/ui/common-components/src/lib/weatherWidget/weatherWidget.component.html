@@ -1,6 +1,9 @@
-<p>{{widgetData.city}}: {{widgetData.message}}</p>
+<!--<p>{{widgetData.city}}: {{widgetData.message}}</p>-->
 
 
-<div></div>
+<!--<div></div>-->
 
-<p>{{city2}}: {{message2}}</p>
+<!--<p>{{city2}}: {{message2}}</p>-->
+
+
+<p *ngIf="widgetDataDefer">{{widgetDataDefer.city}}: {{widgetDataDefer.message}}</p>

@@ -21,3 +21,11 @@ export * from './lib/weatherWidget/weatherWidget.component'
 export * from './lib/clockWidget/clockWidget.component'
 
 export * from './lib/widget-container/widget-tokens'
+
+export * from './lib/widget-lazy-container/widget-loaders'
+
+export * from './lib/widget-lazy-container/widget-lazy-container.component'
+
+export * from './lib/defer-widget/defer-widget.component'
+
+export * from './lib/defer-widget/widgets.enum'

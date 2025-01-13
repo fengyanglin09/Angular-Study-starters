@@ -55,4 +55,10 @@
 <!--<bt-libs-ui-select (selectedChange)="onOptionChange($event)" [labelKey]="'expense'" [options]="[{expense: 'Food',amount: 10},{expense: 'Gas',amount: 20}]"></bt-libs-ui-select>-->
 
 
-<bt-libs-ui-widget-container *ngIf="activeWidget" [widget]="activeWidget"></bt-libs-ui-widget-container>
+<!--<bt-libs-ui-widget-container *ngIf="activeWidget" [widget]="activeWidget"></bt-libs-ui-widget-container>-->
+
+
+<!--<bt-libs-ui-widget-lazy-container [widgetLoader]="widget" [injector]="this.injector"></bt-libs-ui-widget-lazy-container>-->
+
+
+<bt-libs-ui-defer-widget [activeWidget]="this.widget" [activeData]="widgetData"></bt-libs-ui-defer-widget>
