@@ -5,6 +5,7 @@
       <project name="common-components" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/ui/common-components/project.json" />
       <project name="common-directives" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/ui/common-directives/project.json" />
       <project name="common-pipes" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/util/common-pipes/project.json" />
+      <project name="common-rxjs" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/util/common-rxjs/project.json" />
       <project name="expenses" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/finance/data-access/expenses/project.json" />
       <project name="expenses-registration" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/finance/expenses-registration/project.json" />
       <project name="expenses-registration-e2e" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/finance/expenses-registration-e2e/project.json" />

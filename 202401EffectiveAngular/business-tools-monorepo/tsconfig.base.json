@@ -30,6 +30,9 @@
       "@bt-libs/shared/util/common-pipes": [
         "libs/shared/util/common-pipes/src/index.ts"
       ],
+      "@bt-libs/shared/util/common-rxjs": [
+        "libs/shared/util/common-rxjs/src/index.ts"
+      ],
       "@bt-libs/shared/util/form-validators": [
         "libs/shared/util/form-validators/src/index.ts"
       ],
