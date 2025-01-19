@@ -19,12 +19,12 @@ import {
   WidgetContainerComponent, WidgetLazyContainerComponent, widgetLoaders, WidgetOption, Widgets
 } from "@bt-libs/shared/ui/common-components";
 import {ScalesHeaderProjectionDirective, ScalesProjectionDirective} from "@bt-libs/shared/ui/common-directives";
-import {RxjsOperatorsComponent} from "@bt-libs/shared/util/common-rxjs";
+import {FlattenOperatorsComponent, RxjsOperatorsComponent} from "@bt-libs/shared/util/common-rxjs";
 
 
 @Component({
   selector: 'app-expenses-overview-page',
-  imports: [CommonModule, AddExpenseComponent, AddExpenseReactiveComponent, DynamicFormComponent, ModalComponent, DisplayScalesComponent, ScalesProjectionDirective, ScalesHeaderProjectionDirective, DifferentNgTemplateComponent, MultiOpenModelComponent, SelectComponent, WidgetContainerComponent, WidgetLazyContainerComponent, DeferWidgetComponent, RxjsOperatorsComponent],
+  imports: [CommonModule, AddExpenseComponent, AddExpenseReactiveComponent, DynamicFormComponent, ModalComponent, DisplayScalesComponent, ScalesProjectionDirective, ScalesHeaderProjectionDirective, DifferentNgTemplateComponent, MultiOpenModelComponent, SelectComponent, WidgetContainerComponent, WidgetLazyContainerComponent, DeferWidgetComponent, RxjsOperatorsComponent, FlattenOperatorsComponent],
   templateUrl: './expenses-overview-page.component.html',
   styleUrl: './expenses-overview-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
