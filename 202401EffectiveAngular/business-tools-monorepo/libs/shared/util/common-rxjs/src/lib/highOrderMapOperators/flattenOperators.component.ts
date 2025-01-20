@@ -1,6 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {concatAll, concatMap, map, mergeMap, of, Subject, take} from "rxjs";
+import {concatAll, concatMap, exhaustMap, fromEvent, interval, map, mergeMap, of, Subject, switchMap, take} from "rxjs";
+
+
+/**
+ *
+ * it’s important to note that when you use the take(), takeUntil(), or takeUntilDestroyed() operators
+ * inside the pipe of the outer Observable and also use flattening operators in the same pipe() function,
+ * the take(), takeUntil(), and takeUntilDestroyed() operators need to be declared after the flattening operators.
+ * The flattening operators will create their own Observables, and if you declare take(), takeUntil(), or
+ * takeUntilDestroyed() before the flattening operator, the Observables created by the flattening operators will not be
+ * unsubscribed and closed by take(), takeUntil(), or takeUntilDestroyed().
+ *
+ * */
 
 @Component({
   selector: 'bt-libs-util-flatten-operators',
@@ -14,7 +26,9 @@ export class FlattenOperatorsComponent {
     // this.cancatMapDemo()
     // this.cancatAllDemo()
 
-    this.mergeMapDemo()
+    // this.mergeMapDemo()
+
+    this.switchMapDemo()
   }
 
 
@@ -110,5 +124,35 @@ export class FlattenOperatorsComponent {
 
   const subscribe = example.pipe(take(6)).subscribe(val => console.log(val));
 }
+
+/**
+ * The switchMap() operator will switch the Observable stream from the first to the second stream when the second stream starts
+ * to emit values. The switchMap() operator will unsubscribe and complete the first stream so that the first stream will stop
+ * emitting values; the next stream will keep emitting until that stream is completed or until another stream comes
+ * */
+  switchMapDemo(){
+    const clicks = fromEvent(document, 'click');
+    clicks.pipe(
+      switchMap(() => interval(1000).pipe(take(4))),
+    ).subscribe(x => console.log(x));
+  }
+
+
+  /**
+   * The exhaustMap() operator will start to emit the values of the first Observable stream as soon as it starts to emit values.
+   * The exhaustMap() operator will not process any other Observable streams that come in while the first stream is still running.
+   *
+   * In the preceding example, where we used the exhaustMap() operator and clicked and waited for 2 seconds before we made another
+   * click, only the first click will be processed because the first stream takes 4 seconds to complete. So, when we make the second
+   * click, the first stream is not completed yet, so exhaustMap() doesn’t process the second stream. The log of the preceding code
+   * will look like 0, 1, 3, 4.
+   *
+   *  */
+  exhaustMapDemo(){
+    const clicks = fromEvent(document, 'click');
+    clicks.pipe(
+      exhaustMap(() => interval(1000).pipe(take(4))),
+    ).subscribe(x => console.log(x));
+  }
 
 }
