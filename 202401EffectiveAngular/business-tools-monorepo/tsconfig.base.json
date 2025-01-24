@@ -21,6 +21,12 @@
       "@bt-libs/finance/ui/expenses-registration-forms": [
         "libs/finance/ui/expenses-registration-forms/src/index.ts"
       ],
+      "@bt-libs/shared/data-access/common-states": [
+        "libs/shared/data-access/common-states/src/index.ts"
+      ],
+      "@bt-libs/shared/data-access/ngrxStore": [
+        "libs/shared/data-access/ngrxStore/src/index.ts"
+      ],
       "@bt-libs/shared/ui/common-components": [
         "libs/shared/ui/common-components/src/index.ts"
       ],
@@ -35,6 +41,9 @@
       ],
       "@bt-libs/shared/util/form-validators": [
         "libs/shared/util/form-validators/src/index.ts"
+      ],
+      "@bt-libs/shared/util/performanceImprove": [
+        "libs/shared/util/performanceImprove/src/index.ts"
       ],
       "@business-tools/workspace-generators-plugin": [
         "libs/workspace-generators-plugin/src/index.ts"
