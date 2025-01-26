@@ -21,7 +21,7 @@ jobs:
       - name: Adding Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 20.1.0
+          node-version: 20.11.1
 
       # Setup pnpm
       - uses: pnpm/action-setup@v2
@@ -56,6 +56,7 @@ jobs:
 
       # Deploy the expenses-registration to GitHub pages
       - name: Deploy to gh pages
+        working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
         run: |
           npx angular-cli-ghpages --dir=dist/apps/finance/expenses-registration
         env:
