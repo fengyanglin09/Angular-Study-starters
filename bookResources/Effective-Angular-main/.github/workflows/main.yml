@@ -38,15 +38,15 @@ jobs:
 
     # Build finance-expenses-registration application
     - name: Build Angular App
-      run: pnpm nx build finance-expenses-registration --no-cloud --base-href /Effective-Angular/
+      run: pnpm nx build expenses-registration --no-cloud --base-href /Effective-Angular/
 
     # Setup Git on the VM
     - name: Set up Git
       run: |
-        git config --global user.email "robertoheckers@gmail.com"
-        git config --global user.name "RHeckers"
+        git config --global user.email "fengyanglin09@gmail.com"
+        git config --global user.name "Mark Lin"
 
-    # Deploy the finance-expenses-registration to GitHub pages
+    # Deploy the expenses-registration to GitHub pages
     - name: Deploy to gh pages
       run: |
         npx angular-cli-ghpages --dir=dist/apps/finance/expenses-registration

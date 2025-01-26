@@ -1,35 +1,12 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, Injector, OnInit} from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {
-  AddExpenseComponent,
-  AddExpenseReactiveComponent, DynamicControl,
-  DynamicFormComponent
-} from "@bt-libs/finance/ui/expenses-registration-forms";
-import {Validators} from "@angular/forms";
-import {
-  ClockWidgetComponent, DeferWidgetComponent,
-  DifferentNgTemplateComponent,
-  DisplayScalesComponent,
-  ModalComponent,
-  MultiOpenModelComponent,
-  SelectComponent,
-  WEATHERWIDGET,
-  WeatherWidgetComponent,
-  widget,
-  WidgetContainerComponent, WidgetLazyContainerComponent, widgetLoaders, WidgetOption, Widgets
-} from "@bt-libs/shared/ui/common-components";
-import {ScalesHeaderProjectionDirective, ScalesProjectionDirective} from "@bt-libs/shared/ui/common-directives";
-import {
-  ComputedSignalsComponent,
-  FlattenOperatorsComponent, RegularSignalsComponent,
-  ReusableRxjsOperatorsComponent,
-  RxjsOperatorsComponent
-} from "@bt-libs/shared/util/common-rxjs";
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, OnInit} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {Widgets} from "@bt-libs/shared/ui/common-components";
+import {ComputedSignalsComponent} from "@bt-libs/shared/util/common-rxjs";
 
 
 @Component({
   selector: 'app-expenses-overview-page',
-  imports: [CommonModule, AddExpenseComponent, AddExpenseReactiveComponent, DynamicFormComponent, ModalComponent, DisplayScalesComponent, ScalesProjectionDirective, ScalesHeaderProjectionDirective, DifferentNgTemplateComponent, MultiOpenModelComponent, SelectComponent, WidgetContainerComponent, WidgetLazyContainerComponent, DeferWidgetComponent, RxjsOperatorsComponent, FlattenOperatorsComponent, ReusableRxjsOperatorsComponent, RegularSignalsComponent, ComputedSignalsComponent],
+  imports: [CommonModule, ComputedSignalsComponent],
   templateUrl: './expenses-overview-page.component.html',
   styleUrl: './expenses-overview-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

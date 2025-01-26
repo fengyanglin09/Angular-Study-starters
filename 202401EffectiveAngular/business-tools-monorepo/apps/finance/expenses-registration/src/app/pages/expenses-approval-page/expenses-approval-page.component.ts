@@ -1,13 +1,13 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {HighlightDirective, IfFalseDirective} from "@bt-libs/shared/ui/common-directives";
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {HighlightDirective} from "@bt-libs/shared/ui/common-directives";
 import {interval, Observable} from "rxjs";
 import {MultiplyPipe} from "@bt-libs/shared/util/common-pipes";
 import {SelectableLabelComponent} from "@bt-libs/shared/ui/common-components";
 
 @Component({
   selector: 'app-expenses-approval-page',
-  imports: [CommonModule, HighlightDirective, IfFalseDirective, MultiplyPipe, SelectableLabelComponent],
+  imports: [CommonModule, HighlightDirective, MultiplyPipe, SelectableLabelComponent],
   templateUrl: './expenses-approval-page.component.html',
   styleUrl: './expenses-approval-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

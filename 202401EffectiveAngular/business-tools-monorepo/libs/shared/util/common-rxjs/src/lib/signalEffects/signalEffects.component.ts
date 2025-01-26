@@ -12,11 +12,11 @@ export class SignalEffectsComponent implements OnInit, OnDestroy {
 
   count = signal(0);
 
-  showCount = signal(true);
+  showCount = signal(false);
 
-  private countEffect: EffectRef;
+  private countEffect?: EffectRef;
 
-  private canUpdateEffect: EffectRef;
+  private canUpdateEffect?: EffectRef;
 
   constructor() {
 
@@ -25,7 +25,7 @@ export class SignalEffectsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // this effect will run if showCount is true, and there is a new value from count signal
     effect(() => {
-      if(this.showCount){
+      if(this.showCount()){
         console.log('count:', this.count());
       }
     });
@@ -57,8 +57,9 @@ export class SignalEffectsComponent implements OnInit, OnDestroy {
      * To manually destroy the effect, you can call the destroy() method on the effect reference:
      * */
 
-    this.countEffect.destroy();
-
+    if(this.countEffect) {
+      this.countEffect?.destroy();
+    }
     /**
      * You can also hook into the cleanup of a Signal effect by using a callback function.
      * This can be useful when you want to perform some logic when the Signal effect is cleaned up
@@ -83,7 +84,7 @@ export class SignalEffectsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
 
-    this.countEffect.destroy();
+    this.countEffect?.destroy();
 
   }
 

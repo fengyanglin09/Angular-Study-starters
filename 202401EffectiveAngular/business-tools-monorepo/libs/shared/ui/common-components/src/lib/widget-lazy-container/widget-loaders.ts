@@ -4,9 +4,9 @@ type WidgetKey = typeof widgetKeys[number];
 
 export type WidgetLoader = { [key in WidgetKey]: () => Promise<any> };
 
-export const widgetLoaders: WidgetLoader = {
-  weatherWidget: () => import('../weatherWidget/weatherWidget.component'),
-  clockWidget: () => import('../clockWidget/clockWidget.component'),
-};
+// export const widgetLoaders: WidgetLoader = {
+//   weatherWidget: () => import('../weatherWidget/weatherWidget.component'),
+//   clockWidget: () => import('../clockWidget/clockWidget.component'),
+// };
 
 export type WidgetOption = WidgetLoader[keyof WidgetLoader];

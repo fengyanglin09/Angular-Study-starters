@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { WeatherWidgetComponent } from './weatherWidget.component';
+import { TrackByComponent } from './TrackBy.component';
 
-describe('WeatherWidgetComponent', () => {
-  let component: WeatherWidgetComponent;
-  let fixture: ComponentFixture<WeatherWidgetComponent>;
+describe('TrackByComponent', () => {
+  let component: TrackByComponent;
+  let fixture: ComponentFixture<TrackByComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WeatherWidgetComponent],
+      imports: [TrackByComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(WeatherWidgetComponent);
+    fixture = TestBed.createComponent(TrackByComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

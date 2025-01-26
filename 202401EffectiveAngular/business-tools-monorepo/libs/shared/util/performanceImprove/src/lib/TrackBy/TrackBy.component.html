@@ -1,0 +1,11 @@
+<p>TrackBy works!</p>
+
+
+<div *ngFor="let item of items; trackBy: trackById">
+  {{ item.name }}
+</div>
+
+
+@for (item of items; track item.id) {
+  {{ item.name }}
+}
