@@ -33,19 +33,25 @@ jobs:
       # Lint affected projects
       - name: Lint affected
         run: pnpm nx affected -t lint --base=main --no-cloud
+        working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
+
 
       # Unit testing finance-expenses-registration
       - name: Unit test finance-expenses-registration
         run: pnpm nx run finance-expenses-registration:test --no-cloud
+        working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
+
 
       # Build finance-expenses-registration application
       - name: Build Angular App
         run: pnpm nx build expenses-registration --no-cloud --base-href /angular-study-starts/
+        working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
+
 
       # Setup Git on the VM
       - name: Set up Git
         run: |
-          git config --global user.email "fengyanglin09@gmail.com"
+          git config --global user.email "fengyanglin09@gmail.dom"
           git config --global user.name "Mark Lin"
 
       # Deploy the expenses-registration to GitHub pages
