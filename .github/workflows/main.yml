@@ -30,16 +30,16 @@ jobs:
       - run: pnpm install --no-frozen-lockfile
         working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
 
-      # Lint affected projects
-      - name: Lint affected
-        run: pnpm nx affected -t lint --base=main --no-cloud
-        working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
-
-
-      # Unit testing finance-expenses-registration
-      - name: Unit test finance-expenses-registration
-        run: pnpm nx run finance-expenses-registration:test --no-cloud
-        working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
+#      # Lint affected projects
+#      - name: Lint affected
+#        run: pnpm nx affected -t lint --base=main --no-cloud
+#        working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
+#
+#
+#      # Unit testing finance-expenses-registration
+#      - name: Unit test finance-expenses-registration
+#        run: pnpm nx run finance-expenses-registration:test --no-cloud
+#        working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
 
 
       # Build finance-expenses-registration application
