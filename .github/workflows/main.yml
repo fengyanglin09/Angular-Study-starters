@@ -58,7 +58,7 @@ jobs:
       - name: Deploy to gh pages
         working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
         run: |
-          npx angular-cli-ghpages --dir=dist/apps/finance/expenses-registration/browser
+          npx angular-cli-ghpages --dir=dist/apps/finance/expenses-registration/
         env:
           CI: true
           GH_TOKEN: ${{ secrets.GH_PAGES }}
