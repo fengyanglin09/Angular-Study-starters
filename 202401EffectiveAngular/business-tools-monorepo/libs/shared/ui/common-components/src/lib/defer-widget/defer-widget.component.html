@@ -1,0 +1,10 @@
+<!--&lt;!&ndash;Without the *ngIf directive or if control flow syntax, &ndash;&gt;-->
+<!--&lt;!&ndash;the widget will not disappear if the condition returns false. &ndash;&gt;-->
+<!--&lt;!&ndash;The when statement of the defer syntax will not evaluate the condition again after it has resolved to true.&ndash;&gt;-->
+
+<!--@defer (when activeWidget === widgets.Clock) {-->
+<!--  <bt-libs-ui-clock-widget *ngIf="activeWidget === widgets.Clock" />-->
+<!--}-->
+<!--@defer (when activeWidget === widgets.Weather) {-->
+<!--  <bt-libs-ui-weather-widget *ngIf="activeWidget === widgets.Weather" [widgetDataDefer]="activeData" />-->
+<!--}-->

@@ -3,8 +3,19 @@
   <component name="NxAngularConfigService" workspaceLocation="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/nx.json">
     <projects>
       <project name="common-components" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/ui/common-components/project.json" />
+      <project name="common-directives" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/ui/common-directives/project.json" />
+      <project name="common-pipes" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/util/common-pipes/project.json" />
+      <project name="common-rxjs" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/util/common-rxjs/project.json" />
+      <project name="common-states" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/data-access/common-states/project.json" />
+      <project name="expenses" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/finance/data-access/expenses/project.json" />
       <project name="expenses-registration" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/finance/expenses-registration/project.json" />
       <project name="expenses-registration-e2e" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/finance/expenses-registration-e2e/project.json" />
+      <project name="expenses-registration-forms" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/finance/ui/expenses-registration-forms/project.json" />
+      <project name="form-validators" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/util/form-validators/project.json" />
+      <project name="ngrxStore" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/data-access/ngrxStore/project.json" />
+      <project name="performanceImprove" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/shared/util/performanceImprove/project.json" />
+      <project name="social-media-dashboard" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/marketing/social-media-dashboard/project.json" />
+      <project name="social-media-dashboard-e2e" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/apps/marketing/social-media-dashboard-e2e/project.json" />
       <project name="workspace-generators-plugin" file="file://$PROJECT_DIR$/202401EffectiveAngular/business-tools-monorepo/libs/workspace-generators-plugin/project.json" />
     </projects>
   </component>

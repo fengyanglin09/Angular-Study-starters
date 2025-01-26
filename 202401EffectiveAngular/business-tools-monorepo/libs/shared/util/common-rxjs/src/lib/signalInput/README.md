@@ -1,0 +1,3 @@
+As you can see, you can make the input required and provide the Signal input with a configuration object to give it an alias and transform function. The Signal input uses a simpler syntax, helps improve the change detection mechanism, and allows you to remove the ngOnChanges life cycle hook.
+
+When you combine the Signal input with computed Signals, you can remove the ngOnChanges life cycle hook because all properties that need to be updated upon the input of a specific property can now automatically be updated by using a computed Signal based on the input Signal. Any additional logic you want to run can be declared inside a Signal effect that reacts to the Signal input.
