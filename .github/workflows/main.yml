@@ -6,7 +6,6 @@ on:
       - main
   workflow_dispatch:  # ✅ Enables manual execution
 
-# Jobs to run
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,37 +27,24 @@ jobs:
         with:
           version: 8.14.1
       - run: pnpm install --no-frozen-lockfile
-        working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
+        working-directory: 202401EffectiveAngular/business-tools-monorepo/
 
-#      # Lint affected projects
-#      - name: Lint affected
-#        run: pnpm nx affected -t lint --base=main --no-cloud
-#        working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
-#
-#
-#      # Unit testing finance-expenses-registration
-#      - name: Unit test finance-expenses-registration
-#        run: pnpm nx run finance-expenses-registration:test --no-cloud
-#        working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
-
-
-      # Build finance-expenses-registration application
+      # Build Angular App with correct base href
       - name: Build Angular App
-        run: pnpm nx build expenses-registration --no-cloud --base-href /angular-study-starts/
-        working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
-
+        run: pnpm nx build expenses-registration --no-cloud --base-href /Angular-Study-starters/
+        working-directory: 202401EffectiveAngular/business-tools-monorepo/
 
       # Setup Git on the VM
       - name: Set up Git
         run: |
-          git config --global user.email "fengyanglin09@gmail.dom"
+          git config --global user.email "fengyanglddin09@gmail.com"
           git config --global user.name "Mark Lin"
 
-      # Deploy the expenses-registration to GitHub pages
-      - name: Deploy to gh pages
-        working-directory: /home/runner/work/Angular-Study-starters/Angular-Study-starters/202401EffectiveAngular/business-tools-monorepo/
+      # Deploy the Angular App to GitHub Pages
+      - name: Deploy to GitHub Pages
         run: |
-          npx angular-cli-ghpages --dir=dist/apps/finance/expenses-registration/browser
+          npx angular-cli-ghpages --dir=dist/apps/finance/expenses-registration
+        working-directory: 202401EffectiveAngular/business-tools-monorepo/
         env:
           CI: true
           GH_TOKEN: ${{ secrets.GH_PAGES }}
