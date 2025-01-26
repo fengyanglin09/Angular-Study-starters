@@ -43,7 +43,7 @@ jobs:
       # Deploy the Angular App to GitHub Pages
       - name: Deploy to GitHub Pages
         run: |
-          npx angular-cli-ghpages --dir=dist/apps/finance/expenses-registration
+          npx angular-cli-ghpages --dir=dist/apps/finance/expenses-registration/browser
         working-directory: 202401EffectiveAngular/business-tools-monorepo/
         env:
           CI: true
