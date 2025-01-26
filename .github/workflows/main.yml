@@ -4,52 +4,53 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:  # ✅ Enables manual execution
 
 # Jobs to run
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    # Checkout repository
-    - name: Checkout Repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+      # Checkout repository
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    # Install NodeJS
-    - name: Adding Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 20.1.0
+      # Install NodeJS
+      - name: Adding Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20.1.0
 
-    # Setup pnpm
-    - uses: pnpm/action-setup@v2
-      with:
-        version: 8.14.1
-    - run: pnpm install --frozen-lockfile
+      # Setup pnpm
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.14.1
+      - run: pnpm install --frozen-lockfile
 
-    # Lint affected projects
-    - name: Lint affected
-      run: pnpm nx affected -t lint --base=main --no-cloud
+      # Lint affected projects
+      - name: Lint affected
+        run: pnpm nx affected -t lint --base=main --no-cloud
 
-    # Unit testing finance-expenses-registration
-    - name: Unit test finance-expenses-registration
-      run: pnpm nx run finance-expenses-registration:test --no-cloud
+      # Unit testing finance-expenses-registration
+      - name: Unit test finance-expenses-registration
+        run: pnpm nx run finance-expenses-registration:test --no-cloud
 
-    # Build finance-expenses-registration application
-    - name: Build Angular App
-      run: pnpm nx build expenses-registration --no-cloud --base-href /angular-study-starts/
+      # Build finance-expenses-registration application
+      - name: Build Angular App
+        run: pnpm nx build expenses-registration --no-cloud --base-href /angular-study-starts/
 
-    # Setup Git on the VM
-    - name: Set up Git
-      run: |
-        git config --global user.email "fengyanglin09@gmail.com"
-        git config --global user.name "Mark Lin"
+      # Setup Git on the VM
+      - name: Set up Git
+        run: |
+          git config --global user.email "fengyanglin09@gmail.com"
+          git config --global user.name "Mark Lin"
 
-    # Deploy the expenses-registration to GitHub pages
-    - name: Deploy to gh pages
-      run: |
-        npx angular-cli-ghpages --dir=dist/apps/finance/expenses-registration
-      env:
-        CI: true
-        GH_TOKEN: ${{ secrets.GH_PAGES }}
+      # Deploy the expenses-registration to GitHub pages
+      - name: Deploy to gh pages
+        run: |
+          npx angular-cli-ghpages --dir=dist/apps/finance/expenses-registration
+        env:
+          CI: true
+          GH_TOKEN: ${{ secrets.GH_PAGES }}
