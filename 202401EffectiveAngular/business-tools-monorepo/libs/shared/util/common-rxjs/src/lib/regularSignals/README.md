@@ -1,1 +1,0 @@
-when you update a Signal using set() or update() in a component with OnPush change detection, the component will automatically be marked by Angular to be checked for changes. As a result, Angular will automatically update the component on the next change detection cycle.
