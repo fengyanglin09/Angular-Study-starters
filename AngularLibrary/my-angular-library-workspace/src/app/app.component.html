@@ -1,2 +1,15 @@
-<app-nx-welcome></app-nx-welcome>
-<router-outlet></router-outlet>
+<div class="app-container">
+    <!-- Header -->
+    <app-header (toggleSidebar)="toggleSidebar()"></app-header>
+
+    <!-- Sidebar and Main Content -->
+    <div class="content-wrapper">
+        <app-sidebar [isCollapsed]="isSidebarCollapsed"></app-sidebar>
+        <div class="main-content" [ngClass]="{'expanded': isSidebarCollapsed}">
+            <app-main-content></app-main-content>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+</div>
