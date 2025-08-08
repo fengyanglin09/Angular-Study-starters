@@ -9,5 +9,5 @@ import { NxWelcome } from './nx-welcome';
   styleUrl: './app.less',
 })
 export class App {
-  protected title = 'MQML_Angular';
+  protected title = 'demo';
 }

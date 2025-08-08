@@ -12,12 +12,14 @@
     "@angular/platform-browser": "~20.1.0",
     "@angular/router": "~20.1.0",
     "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~20.1.0",
     "@angular-devkit/core": "~20.1.0",
     "@angular-devkit/schematics": "~20.1.0",
+    "@angular/build": "^20.1.5",
     "@angular/cli": "~20.1.0",
     "@angular/compiler-cli": "~20.1.0",
     "@angular/language-service": "~20.1.0",
@@ -37,6 +39,7 @@
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
     "less": "^4.3.0",
+    "ng-packagr": "^20.1.0",
     "nx": "21.3.11",
     "prettier": "^2.6.2",
     "tslib": "^2.3.0",

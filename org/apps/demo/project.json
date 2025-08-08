@@ -1,28 +1,28 @@
 {
-  "name": "MQML_Angular",
+  "name": "demo",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/MQML_Angular/src",
+  "sourceRoot": "apps/demo/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/MQML_Angular",
-        "index": "apps/MQML_Angular/src/index.html",
-        "main": "apps/MQML_Angular/src/main.ts",
+        "outputPath": "dist/apps/demo",
+        "index": "apps/demo/src/index.html",
+        "main": "apps/demo/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/MQML_Angular/tsconfig.app.json",
+        "tsConfig": "apps/demo/tsconfig.app.json",
         "inlineStyleLanguage": "less",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/MQML_Angular/public"
+            "input": "apps/demo/public"
           }
         ],
-        "styles": ["apps/MQML_Angular/src/styles.less"]
+        "styles": ["apps/demo/src/styles.less"]
       },
       "configurations": {
         "production": {
@@ -56,10 +56,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "MQML_Angular:build:production"
+          "buildTarget": "demo:build:production"
         },
         "development": {
-          "buildTarget": "MQML_Angular:build:development"
+          "buildTarget": "demo:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -67,7 +67,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "MQML_Angular:build"
+        "buildTarget": "demo:build"
       }
     },
     "lint": {
@@ -77,7 +77,7 @@
       "continuous": true,
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "MQML_Angular:build",
+        "buildTarget": "demo:build",
         "spa": true
       }
     }
