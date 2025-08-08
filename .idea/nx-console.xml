@@ -4,6 +4,6 @@
     <option name="generatorAllowlist">
       <map />
     </option>
-    <option name="workspacePath" value="org/apps/MQML_Angular" />
+    <option name="workspacePath" value="org" />
   </component>
 </project>

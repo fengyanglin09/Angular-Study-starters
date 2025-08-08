@@ -1,7 +1,7 @@
 {
-  "name": "ui-layout",
+  "name": "ui-components",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/ui-layout/src",
+  "sourceRoot": "libs/ui-components/src",
   "prefix": "lib",
   "projectType": "library",
   "tags": [],
@@ -10,14 +10,14 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/ui-layout/ng-package.json"
+        "project": "libs/ui-components/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/ui-layout/tsconfig.lib.prod.json"
+          "tsConfig": "libs/ui-components/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/ui-layout/tsconfig.lib.json"
+          "tsConfig": "libs/ui-components/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
